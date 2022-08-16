@@ -1,4 +1,4 @@
-.box{
+.box-border{
     position:relative;
     width:200px;
     height:200px;
@@ -8,20 +8,22 @@
     background:#000;
     border-radius:5px;
     overflow:hidden;
+    margin: 60px;
+    float:left;
 }
-.box h1{
+.box-border h1{
     color:#38ed38;
     font-size:4rem;
     position:relative;
     z-index:1;
 }
-.box::after{
+.box-border::after{
     content: '';
     position:absolute;
     background:#000;
     inset:4px;
 }
-.box::before{
+.box-border::before{
     content:'';
     position:absolute;
     width:150px;
