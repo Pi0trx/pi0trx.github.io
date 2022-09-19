@@ -1,302 +1,283 @@
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="author" content="PiotrX">
-  <meta name="description" content="Portfolio website | Web Developer | Open source Enthusiast">
-  <meta name="keywords" content="PiotrX, portfolio, css, javascript, software, coding, programming, web, html, development, developer, frontend">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="IZ7Sm227j_9N0Sy_JmwOvn1_OAm_O2rHr2833ZV0Fro">
-  <title>PiotrX</title>
-  <link rel="stylesheet" href="./style.css" />
-  <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700,300|Quattrocento" rel="stylesheet">
-  <link rel="shortcut icon" href="./img/fbavatar_1630400663387_6838396024049256103.png" type="image/x-icon">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
- <meta name="title" content="Portfolio Website | PiotrX">
- <meta itemprop="description" content="Web Developer | Open source Enthusiast">
- <meta name="application-name" content="Portfolio Website">
- <meta property="og:site_name" content="">
- <meta property="og:type" content="website">
- <meta property="og:url" content="https://pi0trx.github.io/">
- <meta property="og:title" content="PiotrX">
- <meta property="og:description" content="Portfolio website | Web Developer | Open source Enthusiast">
- <meta name="url" content="https://pi0trx.github.io/">
- <meta name="language" content="English">  
- <meta property="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://pi0trx.github.io/">
-<meta name="twitter:title" content="PiotrX">
-<meta name="twitter:description" content="Portfolio website | Web Developer | Open source Enthusiast">
-<meta name="twitter:site" content="@PiotrZi83484309">
-<meta name="twitter:creator" content="@PiotrZi83484309">
-<meta name="url" content="https://pi0trx.github.io/">
-<meta property="og:locale" content="en">
-<meta name="language" content="English">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="512">
-<meta property="og:image:height" content="512">
-<meta property="twitter:image:type" content="image/png">
-<meta property="twitter:image:width" content="512">
-<meta property="twitter:image:width" content="512">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
 
+    <title>Hello, world!</title>
+  </head>
+  <body>
 
-<link rel="stylesheet" href="css/style.css">
-<script src="js/main.js"></script>
-
-
-</head>
-
-<body>
-  <header class="header">
-    <nav class="navbar">
-      <div class="navbar-container container">
-        <div>
-          <h1 class="navbar-brand">PiotrX</h1>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" alt="" width="90" height="24">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Films</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Latest</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control form-control-dark me-2" type="search" placeholder="Search..." aria-label="Search">
+          </form>
+          <form class="d-flex">
+            <button class="btn btn-outline-success me-2" id="login" type="button" data-bs-toggle="modal" data-bs-target="#login-pop">Login</button>
+            <button class="btn btn-outline-success me-2" id="sign-up" type="button" data-bs-toggle="modal" data-bs-target="#login-pop">Sign-up</button>
+          </form>
         </div>
-        <ul class="menu-items">
-          <li><a href="#about">About</a></li>
-          <li><a href="#my-works">Portfolio</a></li>
-          <li><a href="#contact-me">Contact</a></li>
-        </ul>
       </div>
     </nav>
-    <div class="home-content" id="home-page">
-      <div class="name">
-        <h1>Hi, I'm PiotrX</h1>
-        <!--<p>A Web Developer in training.</p>-->
-        <p>I'm a  Web Developer in training.</p>
-      </div>
-      <div class="angle-down-icon">
-        <a href="#about"><i class="fas fa-angle-down"></i></a>
-      </div>
-    </div>
-  </header>
-  <section class="about-me" id="about">
-    <div class="container">
-      <div class="about-content">
-        <div class="left-content">
-          <div>
-           <h1 class="about-heading">About Me</h1>
-          </div> 
-          <img src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="image" />
-          <p>
-            I really enjoy solving problems as well as making things pretty and easy to use. I can't stop learning new
-            things; the more, the better.
-          </p>
-          <div class="work-arrow">
-            <p>
-              <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
-            </p>
-          </div>
-        </div>
-        <div class="skills">
-          <div class="right-content">
-            <div>
-              <h1 class="skills-heading">My Skills</h1>
-            </div>
-            <div class="skills-bar">
-              <div class="bar">
-                <div class="info">
-                  <span>HTML</span>
-                </div>
-                <div class="progress-line"><span class="html"></span></div>
-                <div class="bar">
-                  <div class="info">
-                    <span>CSS</span>
-                  </div>
-                  <div class="progress-line"><span class="css"></span></div>
-                  <div class="bar">
-                    <div class="info">
-                      <span>BOOTSTRAP</span>
-                    </div>
-                    <div class="progress-line"><span class="bootstrap"></span></div>
-                    <div class="bar">
-                      <div class="info">
-                        <span>JAVASCRIPT</span>
-                      </div>
-                      <div class="progress-line"><span class="javascript"></span></div>
-                      <div class="bar">
-                        <div class="info">
-                          <span>PHP</span>
-                        </div>
-                        <div class="progress-line"><span class="c"></span></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="work-arrow-2">
-              <p>
-                <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- </section>
-  <section id="my-works">
-    <div class="portfolio">
-      <div class="proj-heading">
-        <h1>Portfolio</h1>
-      </div>
-      <!---->
+    <style>
+      .nav-link{
+        color:#fff;
+      }
+      .active{
+        color:#6c757d;
+      }
+      .form-control-dark{
+        color: #fff;
+        background-color: #212529;
+        border-color: #6c757d;
+      }
+      .form-control-dark:focus{
+        color: #fff;
+        background-color: #212529;
+        border-color: #6c757d;
+        box-shadow: rgba(255,255,255, 0.25) 0px 0px 0px 4px;
+      }
+      #login{
+        color: #f8f9fa;
+        border-color: #f8f9fa;
+      }
+      #login:hover{
+        color: #000;
+        border-color: #f8f9fa;
+        background-color: #f8f9fa;
+        box-shadow: rgba(248,249,250, 0.5) 0px 0px 0px 4px;
+      }
+      #login:focus{
+        box-shadow: rgba(248,249,250, 0.5) 0px 0px 0px 4px;
+      }
+      #sign-up{
+        color: #000;
+        background-color: #ffc107;
+        border-color: #ffc107;
+      }
+      #sign-up:hover{
+        color: #000;
+        background-color: #ffc107;
+        border-color: #ffc107;
+        box-shadow: rgba(217,164,6, 0.5) 0px 0px 0px 4px;
+      }
+      #sign-up:focus{
+        box-shadow: rgba(217,164,6, 0.5) 0px 0px 0px 4px;
+      }
+    </style>
 
-      <!---->
-      <div class="portfolio-content container">
-        <div class="proj-1">
-          <img src="https://pi0trx.github.io/images/coming-soon.jpg">
-          <div class="proj1-details">
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-bootstrap"></i>
-            <i class="fab fa-js"></i>
-            <i class="fab fa-php"></i>
-            <h2>Cooming Soon</h2>
-            <p>Build Using HTML,CSS,BOOTSTRAP,JS,PHP</p>
-            <button><a href="#my-works" target="blank">View source <i
-              class="fas fa-external-link-alt"></i></a>
-            </button>
-            <button><a href="#my-works" target="blank">Try it Live <i
-              class="fas fa-external-link-alt"></i></a>
-          </button>
-          </div>
-        </div>
-        
-        <div class="proj-2">
-          <img src="https://pi0trx.github.io/images/coming-soon.jpg">
-          <div class="proj2-details">
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-bootstrap"></i>
-            <i class="fab fa-js"></i>
-            <i class="fab fa-php"></i>
-            <h2>Cooming Soon</h2>
-            <p>Build Using HTML,CSS,BOOTSTRAP,JS,PHP</p>
-            <button><a href="#my-works" target="blank">View source <i
-              class="fas fa-external-link-alt"></i></a>
-            </button>
-            <button><a href="#my-works" target="blank">Try it Live <i
-              class="fas fa-external-link-alt"></i></a>
-          </button>
-          </div>
-          
-        </div>
-        <div class="more-work">
-          <p>
-            More
-          </p>
-          <a href="https://codepen.io/piotrx" target="blank">CodePen</a>
-        </div>
+
+<div class="modal fade" id="login-pop" tabindex="-1" aria-labelledby="login-popLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="login-popLabel">Error</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <!---->
-
-      <!---->
-
-      <!--<div class="portfolio-content container">
-        <div class="proj-1">
-          <img src="https://i.postimg.cc/qM9TjGTG/Screenshot-80.png">
-          <div class="proj1-details">
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-js"></i>
-            <h2>Restaurant Website UI</h2>
-            <p>Build Using HTML,CSS,JS</p>
-            <button><a href="https://github.com/sanketbodke/Restaurant-Website" target="blank">View source <i
-              class="fas fa-external-link-alt"></i></a>
-            </button>
-            <button><a href="https://fervent-lamarr-2bc6cf.netlify.app/" target="blank">Try it Live <i
-              class="fas fa-external-link-alt"></i></a>
-          </button>
-          </div>
-        </div>
-        
-        <div class="proj-2">
-          <img src="https://i.postimg.cc/FR848bSm/Screenshot-76.png">
-          <div class="proj2-details">
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-css3-alt"></i>
-            <h2>Profile Card</h2>
-            <p>Build Using HTML,CSS</p>
-            <button><a href="https://github.com/sanketbodke/CodePen" target="blank">View source <i
-              class="fas fa-external-link-alt"></i></a>
-            </button>
-            <button><a href="https://codepen.io/sanketbodke/pen/NWgKyZW" target="blank">Try it Live <i
-              class="fas fa-external-link-alt"></i></a>
-          </button>
-          </div>
-          
-        </div>
-        <div class="more-work">
-          <p>
-            More
-          </p>
-          <a href="https://codepen.io/piotrx" target="blank">CodePen</a>
-        </div>
-      </div>-->
-    </div>
-  </section>
-  <div class="contact" id="contact-me">
-    <div class="container">
-      <div class="contact-content">
-        <h2>Contact Me</h2>
-        <p class="mail">
-          Contact me through Discord <i class="fas fa-arrow-right"></i> <a href="https://discord.gg/hbTgtKqE2N">Piotrx#2469</a>
-        </p>
-        <p class="links">Or find me on:</p>
-        <a href="https://codepen.io/piotrx" target="blank"><i class="fab fa-codepen"> CodePen</i></a>
-        <a href="https://github.com/Pi0trx" target="blank"><i class="fab fa-github"></i> Github</a>
-        <!--<a href="https://twitter.com/PiotrZi83484309" target="blank"><i class="fab fa-twitter"> Twitter</i></a>
-        <a href="https://www.instagram.com/pi0trx_/" target="blank"><i class="fab fa-instagram"></i> Instagram</a>-->
-        <a href="https://discord.gg/hbTgtKqE2N" target="blank"><i class="fab fa-discord"></i> Discord</a>
+      <div class="modal-body">
+        Login and Sign-up will coming soon...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Done</button>
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $(window).scroll(function () {
-        // checks if window is scrolled more than 500px, adds/removes solid class
-        if ($(this).scrollTop() > 550) {
-          $('.navbar').addClass('solid');
-          $('.back-to-top').addClass('visible');
-        } else {
-          $('.navbar').removeClass('solid');
-          $('.back-to-top').removeClass('visible');
-        }
+</div>
 
-      });
-    });
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      // Add smooth scrolling to all links
-      $("a").on('click', function (event) {
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
 
-          // Store hash
-          var hash = this.hash;
 
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function () {
 
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-    });
-  </script>
-</body>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/carousel4.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption text-start">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+        <p>
+          <button type="button" class="btn btn-primary btn-lg">Large button</button>
+          <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/carousel5.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption text-start">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+        <p>
+          <button type="button" class="btn btn-primary btn-lg c-play">Play</button>
+          <button type="button" class="btn btn-secondary btn-lg c-info">More Info</button>
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/carousel6.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<style>
+  .carousel-slide{
+    height: 34rem;
+    margin-bottom: 4rem;
+  }
+  .carousel-item{
+    height: 34rem;
+  }
+  .carousel-item h1{
+    font-size: 2.5rem;
+  }
+  .carousel-item p{
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .carousel-item btn{
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+  }
+  .c-play{
+    background-color: #DB202C;
+    border-color: #DB202C;
+  }
+  .c-play:focus{
+        box-shadow: rgba(219, 32, 44, 0.5) 0px 0px 0px 4px;
+      }
+  .c-info{
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  .c-info:focus{
+        box-shadow: rgba(130, 138, 145, 0.5) 0px 0px 0px 4px;
+      }
+</style>
+
+  <div style="height:900px; width:200px;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<div class="cn">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/carousel4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/carousel5.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/carousel6.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>-->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
 </html>
