@@ -18,11 +18,13 @@
 *{
   --text-color: #fff;
   --background-color: #212529;
+  --border: #dee2e6;
 }
 body{
   background-color: var(--background-color);
   font-family: font-medium;
+  color: var(--text-color)
 }
-.m-series-text{
-  color: var(--text-color);
+footer{
+  color: rgba(255,255,255,.55);;
 }
