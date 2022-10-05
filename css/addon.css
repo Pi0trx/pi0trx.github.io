@@ -26,6 +26,12 @@
     background-color: #f8f9fa;
     box-shadow: rgba(248,249,250, 0.5) 0px 0px 0px 4px;
 }
+#login:active{
+    color: #000;
+    border-color: #f8f9fa;
+    background-color: #f8f9fa;
+    box-shadow: rgba(248,249,250, 0.5) 0px 0px 0px 4px;
+}
 #login:focus{
     box-shadow: rgba(248,249,250, 0.5) 0px 0px 0px 4px;
 }
