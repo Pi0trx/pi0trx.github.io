@@ -37,13 +37,13 @@
 }
 #sign-up{
     color: #000;
-    background-color: #ffc107;
-    border-color: #ffc107;
+    background-color: var(--button-c-singup);
+    border-color: var(--button-c-singup);
 }
 #sign-up:hover{
     color: #000;
-    background-color: #ffc107;
-    border-color: #ffc107;
+    background-color: var(--button-c-singup);
+    border-color: var(--button-c-singup);
     box-shadow: rgba(217,164,6, 0.5) 0px 0px 0px 4px;
 }
 #sign-up:focus{
@@ -72,30 +72,34 @@
     border-radius: 0.3rem;
 }
 .c-play{
-    background-color: #DB202C;
-    border-color: #DB202C;
+    background-color: var(--button-play-c);
+    border-color: var(--button-play-c);
 }
 .c-play:hover{
-    background-color: #DB202C;
-    border-color: #DB202C;
+    background-color: var(--button-play-c);
+    border-color: var(--button-play-c);
     box-shadow: rgba(219, 32, 44, 0.5) 0px 0px 0px 4px;
 }
 .c-play:focus{
-    background-color: #DB202C;
-    border-color: #DB202C;
+    background-color: var(--button-play-c);
+    border-color: var(--button-play-c);
     box-shadow: rgba(219, 32, 44, 0.5) 0px 0px 0px 4px;
 }
 .c-info{
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: var(--button-info-c);
+    border-color: var(--button-info-c);
 }
 .c-info:hover{
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: var(--button-info-c);
+    border-color: var(--button-info-c);
     box-shadow: rgba(130, 138, 145, 0.5) 0px 0px 0px 4px;
 }
 .c-info:focus{
     box-shadow: rgba(130, 138, 145, 0.5) 0px 0px 0px 4px;
+}
+.c-btn-play{
+    height: 24px;
+    width: 24px;
 }
 
 /*New Releases*/
@@ -136,4 +140,11 @@
 
 .n-container:hover .n-overlay {
     opacity: 1;
+}
+
+/*MAIN*/
+.main-image {
+    display: block;
+    width: 100%;
+    height: auto;
 }
