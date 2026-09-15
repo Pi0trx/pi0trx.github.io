@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piotr Zieliński — Applied Informatics & Robotics</title>
+  <meta name="description" content="Portfolio of Piotr Zieliński — Applied Informatics student, roboticist, and software builder." />
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: rgba(18, 24, 38, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.12), transparent),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 40px 40px, 40px 40px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 4rem;
+    }
+
+    /* Header / Hero */
+    header {
+      margin-bottom: 4rem;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-family: var(--mono);
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .bio {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 680px;
+      margin-bottom: 1.8rem;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0b0f19;
+    }
+
+    .btn-primary:hover {
+      background: #7dd3fc;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-1px);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--card-border);
+    }
+
+    /* Projects Grid */
+    .project-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.6rem;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      backdrop-filter: blur(10px);
+    }
+
+    .project-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px -10px var(--accent-glow);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.6rem;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .project-tag {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+    }
+
+    .project-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tech-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-family: var(--mono);
+      color: #cbd5e1;
+    }
+
+    /* Tech Stack Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-category {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+
+    .skill-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .skill-items {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding-top: 3rem; }
+      footer { flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="status-badge">
+        <span class="dot"></span>
+        <span>Warsaw University of Technology &bull; Applied Informatics</span>
+      </div>
+      <h1>Hi, I'm <span class="highlight">Piotr Zieliński</span>.</h1>
+      <p class="bio">
+        Software developer, roboticist, and tech builder. Focusing on autonomous robotic systems, embedded engineering, computer vision, and building resilient software architectures.
+      </p>
+      <div class="links">
+        <a href="https://github.com/pi0trx" target="_blank" rel="noopener" class="btn btn-primary">
+          <i data-lucide="github" style="width: 16px; height: 16px;"></i>
+          GitHub Profile
+        </a>
+        <a href="mailto:contact@pi0trx.dev" class="btn btn-secondary">
+          <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+          Get in touch
+        </a>
+      </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section>
+      <div class="section-title">Featured Projects</div>
+      <div class="project-grid">
+
+        <!-- KNR HAL-062 Rover -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">HAL-062 Mars Rover</h3>
+            <span class="project-tag">KNR &bull; Robotics</span>
+          </div>
+          <p class="project-desc">
+            Autonomous software systems, perception, and manipulator controls developed with Koło Naukowe Robotyków for European Rover Challenge (ERC). Features ROS 2 autonomy nodes, depth-camera pipelines, and hardware integration.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-pill">ROS 2</span>
+            <span class="tech-pill">C++</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">ZED 2i</span>
+            <span class="tech-pill">Autonomous Navigation</span>
+          </div>
+        </div>
+
+        <!-- Uczelnie Przyszłości: Smart Szafka -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">Smart Szafka</h3>
+            <span class="project-tag">Uczelnie Przyszłości</span>
+          </div>
+          <p class="project-desc">
+            An automated IoT storage ecosystem featuring remote access authentication, system state logging, fault tolerance, and physical embedded controller interfaces.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-pill">IoT</span>
+            <span class="tech-pill">Embedded C</span>
+            <span class="tech-pill">MicroPython</span>
+            <span class="tech-pill">System Architecture</span>
+          </div>
+        </div>
+
+        <!-- Netflix Landing Clone (renamed repo) -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">Netflix Web UI Clone</h3>
+            <span class="project-tag">Frontend</span>
+          </div>
+          <p class="project-desc">
+            High-fidelity landing page replica focusing on layout precision, modern CSS styling, cross-device responsiveness, and smooth asset loading.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Responsive Design</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills & Stack Section -->
+    <section>
+      <div class="section-title">Technical Domains</div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-title">
+            <i data-lucide="cpu" style="width: 16px; height: 16px; color: var(--accent);"></i>
+            Embedded & Hardware
+          </div>
+          <p class="skill-items">Raspberry Pi, ESP32, Pico W, MicroPython, I2C/SPI, Sensor integration, 3D Prototyping.</p>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-title">
+            <i data-lucide="bot" style="width: 16px; height: 16px; color: var(--accent);"></i>
+            Robotics & Autonomy
+          </div>
+          <p class="skill-items">ROS 2, OpenCV, YOLO, Depth Perception (ZED2i), Manipulator Kinematics, Linux / Ubuntu.</p>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-title">
+            <i data-lucide="code" style="width: 16px; height: 16px; color: var(--accent);"></i>
+            Core Development
+          </div>
+          <p class="skill-items">Python, C/C++, Java, Git, Docker, System Architecture, Conda environments.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>&copy; 2026 Piotr Zieliński &bull; pi0trx.github.io</div>
+      <div>Crafted for performance & clean architecture</div>
+    </footer>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
